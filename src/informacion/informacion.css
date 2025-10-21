@@ -1,0 +1,207 @@
+.container-general-informacion-banner{
+  overflow: hidden;
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 20px
+}
+
+.container-general-informacion-banner .titulo h1{
+  width: 699px;
+  text-align: left;
+}
+
+
+.container-general-informacion-banner h1{
+  color: #004187;
+  font-size: 48px;
+}
+
+.container-general-informacion-banner .titulo strong{
+  font-family: "Albert Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 800;
+  color: #0660C2;
+  font-size: 48px;
+}
+
+/* --- ESTILOS PARA LOS CÍRCULOS DECORATIVOS --- */
+
+/* Estilo base para TODOS los círculos */
+.circle {
+  position: absolute;   /* ¡Clave! Los saca del flujo normal y los ancla al banner. */
+  border-radius: 50%; /* Esto los convierte en círculos perfectos. */
+  z-index: 1;         /* Los pone detrás del texto (que tiene z-index 10). */
+}
+
+/* Tamaños de los círculos */
+.circle.grande {
+  /* Usamos vw (viewport width) para que el tamaño sea un % del ANCHO de la pantalla */
+  width: 25vw;
+  height: 25vw;
+}
+
+.circle.mediano {
+  width: 20vw;
+  height: 20vw;
+}
+
+
+/* Colores y Posiciones */
+
+/* Círculo grande de la izquierda */
+.azul-oscuro-izq {
+  background-color: #1E5B9A; /* Color del círculo más grande */
+  bottom: -12vw; /* Lo empuja hacia abajo */
+  left: -10vw;   /* Lo empuja hacia la izquierda */
+}
+
+/* Círculo mediano de la izquierda */
+.azul-claro-izq {
+  background-color: #0660C2; /* Color del círculo más claro */
+  bottom: -15vw;
+  left: 2vw;
+}
+
+/* Círculo grande de la derecha */
+.azul-oscuro-der {
+  background-color: #1E5B9A;
+  bottom: -12vw;
+  right: -10vw; /* Lo ancla y empuja a la derecha */
+}
+
+/* Círculo mediano de la derecha */
+.azul-claro-der {
+  background-color: #0660C2;
+  bottom: -15vw;
+  right: 2vw;
+}
+
+
+@media (max-width: 768px) {
+  .titulo h1 {
+    font-size: 1.8rem; 
+  }
+
+  .circle.grande {
+    width: 35vw;
+    height: 35vw;
+  }
+  .circle.mediano {
+    width: 28vw;
+    height: 28vw;
+  }
+}
+
+@media (max-width: 568px) {
+
+  .circle.grande {
+    display: none;
+  }
+  .circle.mediano {
+    display: none;
+  }
+
+  .container-general-informacion-banner{
+    height: 250px;
+  }
+}
+
+.container-banner-beneficios{
+  width: 100%;
+  height: 400px;
+  background-image: url('/assets/beneficios.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 48%;
+  filter: brightness(80%);
+  transition: filter 0.5s ease;
+}
+
+
+.container-banner-beneficios .tarjetas-beneficio{
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-banner-beneficios .tarjetas-beneficio .grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+}
+
+@media (max-width: 1050px) {
+  .container-banner-beneficios .tarjetas-beneficio .grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, auto);
+  }
+}
+
+.container-banner-beneficios .tarjetas-beneficio .grid .icono-beneficio{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 322px;
+  height: 44px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.603);
+}
+
+.container-banner-beneficios .tarjetas-beneficio .grid .icono-beneficio h3{
+  padding: 0%;
+  margin: 0%;
+}
+
+.container-tabla-informacion{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.container-tabla {
+  width: 60%;
+  
+}
+
+.tableCellClasses.head {
+  font-size: 30px;
+  font-family: "Albert Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #004187;
+  font-weight: bold;
+  border: 2px solid #0660C2; 
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .container-general-informacion-banner .titulo h1{
+    text-align: center;
+  }
+}
+
+@media (max-width: 580px) {
+  .container-general-informacion-banner .titulo h1{
+    width: 300px;
+    text-align: left;
+    font-size: 38px;
+  }
+
+  .container-general-informacion-banner .titulo strong{
+  font-size: 38px;
+}
+
+}
