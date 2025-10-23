@@ -5,7 +5,10 @@
     display: flex;
     align-items: center;
     width: 100%;
-    position: relative; /* Para el menú desplegable */
+    position: fixed; /* Lo cambio para que el navbar sea fijo */
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .container-header{
