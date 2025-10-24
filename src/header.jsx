@@ -1,7 +1,16 @@
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './header.css'
 
 export const HeaderComponent = () => {
+
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const desplegarMenu = () => {
     const menu = document.querySelector('.menu-desplegable-movil');
@@ -9,7 +18,7 @@ export const HeaderComponent = () => {
   }
 
   return (
-    <div className="container-header-general">
+    <div className={`container-header-general ${scrolled ? 'scrolled' : ''}`}>
       <div className='container-header'>
         <Link to="/" className='logo-link'>
           <img className='logo' src="/assets/logo.jpg" alt="logo innovagas" />

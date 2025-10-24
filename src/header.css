@@ -11,6 +11,12 @@
     z-index: 1000;
 }
 
+.container-header-general.scrolled {
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+    transition: all 0.3 ease;
+    background-color: rgba(255, 255, 255, 0.98);
+}
+
 .container-header{
     display: flex;
     justify-content: space-between;
