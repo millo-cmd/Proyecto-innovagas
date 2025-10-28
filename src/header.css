@@ -5,7 +5,16 @@
     display: flex;
     align-items: center;
     width: 100%;
-    position: relative; /* Para el menú desplegable */
+    position: fixed; /* Lo cambio para que el navbar sea fijo */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.container-header-general.scrolled {
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+    transition: all 0.3 ease;
+    background-color: rgba(255, 255, 255, 0.98);
 }
 
 .container-header{
