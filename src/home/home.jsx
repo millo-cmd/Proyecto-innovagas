@@ -40,7 +40,7 @@ export const HomeComponent = () => {
           <h1 className='titulo'>Ofrecemos energía sostenible</h1>
           <p className='parrafo-banner'>Para que juntos hagamos de esta hermosa Guatemala el próspero país que todos merecemos</p>
             <div className='contenedorBoton'>
-              <Link to="/contacto" className='boton-contacto'>Contactanos!</Link>
+              <Link to="/contacto" className='boton-contacto'>¡Contáctanos!</Link>
               <Link to="/productos" className='boton-producto'>Productos</Link> 
             </div>
             <div className='logos'>
