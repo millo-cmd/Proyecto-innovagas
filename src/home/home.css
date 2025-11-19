@@ -26,7 +26,7 @@ p {
   left: 0;
   height: 367px;
   width: 100%;
-  background-image: url('/assets/Mesa de trabajo 1.png');
+  background-image: url('/assets/flamaOrnilla.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center 65%;
@@ -74,12 +74,15 @@ p {
   color: white;
   font-size: 18px;
   transition: all 0.3s ease;
+  /* Añadido para centrar el texto en el Link */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .boton-contacto:hover {
   background-color: #2e943f;
 }
-
 
 .boton-producto {
   background-color: transparent;
@@ -91,6 +94,10 @@ p {
   color: white;
   font-size: 18px;
   transition: all 0.4s ease;
+  /* Añadido para centrar el texto en el Link/button */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .boton-producto:hover {
@@ -106,6 +113,7 @@ p {
   background-color: black;
   opacity: 70%;
   z-index: 1;
+  /* ¡¡ OJO !! Esta sombra es muy fuerte, mira la Observación #3 */
   box-shadow: 0px 5px 28px 17px rgba(0, 0, 0, 1);
 }
 
@@ -175,7 +183,6 @@ p {
   justify-content: center;
 }
 
-
 .producto-mision {
   height: 300px;
   width: 100%;
@@ -195,68 +202,13 @@ p {
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: transparent;
+  background-color: #ededed;
   height: fit-content;
-  padding: 7rem 2rem;
+  padding: 7rem;
   z-index: 1;
-  /* Asegurar que el contenedor tenga z-index */
   gap: 10rem;
   margin-bottom: 8rem;
-  border: none;
-  position: relative;
-  overflow: hidden;
-}
-
-.card-container-targets::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 40%;
-  background:
-    /* inicio, más repartidas */
-    radial-gradient(circle at 5% 65%, rgba(0, 65, 135, 0.75) 130px, transparent 21px),
-    radial-gradient(circle at 12% 55%, rgba(0, 65, 135, 0.75) 130px, transparent 21px),
-    radial-gradient(circle at 20% 70%, rgba(0, 65, 135, 0.66) 130px, transparent 31px),
-    radial-gradient(circle at 28% 45%, rgba(0, 65, 135, 0.3) 135px, transparent 6px),
-    radial-gradient(circle at 35% 60%, rgba(0, 65, 135, 0.66) 160px, transparent 31px),
-    radial-gradient(circle at 42% 75%, rgba(0, 65, 135, 0.50) 110px, transparent 31px),
-
-    /* centro más despejado */
-    radial-gradient(circle at 55% 55%, rgba(0, 65, 135, 0.2) 90px, transparent 40px),
-
-    /* final, también repartidas */
-    radial-gradient(circle at 68% 65%, rgba(0, 65, 135, 0.75) 130px, transparent 21px),
-    radial-gradient(circle at 52% 55%, rgba(0, 65, 135, 0.75) 130px, transparent 21px),
-    radial-gradient(circle at 60% 70%, rgba(0, 65, 135, 0.66) 130px, transparent 31px),
-    radial-gradient(circle at 78% 45%, rgba(0, 65, 135, 0.3) 135px, transparent 6px),
-    radial-gradient(circle at 85% 60%, rgba(0, 65, 135, 0.66) 160px, transparent 31px),
-    radial-gradient(circle at 92% 75%, rgba(0, 65, 135, 0.50) 110px, transparent 31px),
-    radial-gradient(circle at 100% 75%, rgba(0, 65, 135, 0.35) 140px, transparent 11px);
-  background-size: 1540px 300px;
-  z-index: -1;
-  pointer-events: none;
-  opacity: 0.6;
-}
-
-
-.card-container-targets::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background:
-    radial-gradient(circle at 80% 20%, rgba(0, 123, 255, 0.02) 0%, transparent 40%),
-    radial-gradient(circle at 10% 80%, rgba(0, 123, 255, 0.03) 0%, transparent 45%),
-    radial-gradient(circle at 50% 50%, rgba(0, 123, 255, 0.02) 0%, transparent 50%),
-    radial-gradient(circle at 90% 60%, rgba(0, 123, 255, 0.01) 0%, transparent 55%),
-    radial-gradient(circle at 20% 40%, rgba(0, 123, 255, 0.02) 0%, transparent 60%);
-  z-index: -1;
-  /* ¡IMPORTANTE: -1 para que esté DETRÁS del contenedor! */
-  pointer-events: none;
+  border: 10px solid #004187;
 }
 
 .target-logo {
@@ -272,45 +224,7 @@ p {
   gap: 10px;
   cursor: default;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  position: relative;
-  z-index: 2;
-  /* Las tarjetas por encima del contenedor */
-  border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0, 65, 135, 0.08);
-  border: 1.5px solid rgba(0, 65, 135, 0.1);
 }
-
-/* Responsive para card-container-targets */
-@media (max-width: 1200px) {
-  .card-container-targets {
-    gap: 5rem;
-  }
-}
-
-@media (max-width: 984px) {
-  .card-container-targets {
-    flex-direction: column;
-    padding: 4rem 1rem;
-    gap: 2rem;
-    margin-bottom: 4rem;
-  }
-
-  .target-logo {
-    width: min(400px, 100%);
-  }
-
-  .card-container-targets::before,
-  .card-container-targets::after {
-    height: 80%;
-  }
-}
-
-@media (max-width: 768px) {
-  .card-container-targets {
-    padding: 3rem 1rem;
-  }
-}
-
 
 .logo-sostenible {
   width: 50px;
@@ -355,18 +269,13 @@ p {
   box-shadow: 0px 5px 28px 17px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   border-radius: 8px;
-  /* Opcional: para esquinas redondeadas */
 }
 
 .card img {
   width: 100%;
-  /* Cambiado de 300px a 100% para que respete el contenedor */
   height: 200px;
-  /* Altura fija para uniformidad */
   object-fit: cover;
-  /* Mantiene proporción de la imagen */
   display: block;
-  /* Elimina espacio extra debajo de la imagen */
 }
 
 .container-informacion {
@@ -394,19 +303,15 @@ p {
 }
 
 @media(max-width: 1200px) {
-
   .container-general-productos {
     margin-top: 1rem;
   }
-
   .container-informacion p {
     height: 150px;
   }
-
   .card-container-targets {
     gap: 3rem;
   }
-
   .producto-destacado,
   .producto-vision {
     padding-right: 1rem;
@@ -416,33 +321,26 @@ p {
 }
 
 @media(max-width: 984px) {
-
   .card-uno,
   .card-dos,
   .card-tres {
     top: 0;
   }
-
   .tarjetas-container {
     gap: 20px;
   }
-
   .card-uno {
     margin-top: 20px;
   }
-
   .card-uno img {
     display: none;
   }
-
   .card-dos img {
     display: none;
   }
-
   .card-tres img {
     display: none;
   }
-
   .producto-destacado {
     right: 0;
     padding-left: 0px;
@@ -452,7 +350,6 @@ p {
     box-shadow: 0px 3px 23px 9px rgba(0, 0, 0, 0.1);
     padding-left: 1rem !important;
   }
-
   .producto-mision {
     right: 0;
     max-width: 600px;
@@ -464,7 +361,6 @@ p {
     justify-content: center;
     padding-top: 0px;
   }
-
   .producto-vision {
     right: 0;
     max-width: 600px;
@@ -476,11 +372,9 @@ p {
     padding-top: 0px;
     justify-content: center;
   }
-
   .container-general-productos {
     margin-top: 1rem;
   }
-
   .card-container-targets {
     flex-direction: column;
     padding-top: 1rem;
@@ -489,27 +383,21 @@ p {
     justify-content: center;
     align-items: center;
   }
-
   .contenedorBanner {
     padding-left: 30px;
   }
-
   .contenedorBanner p {
     width: 300px;
   }
-
   .titulo {
     font-size: 26px;
   }
-
   .parrafo-banner {
     font-size: 16px;
   }
-
 }
 
 @media(max-width: 500px) {
-
   .producto-destacado {
     height: 300px;
     margin-right: 0rem;

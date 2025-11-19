@@ -1,56 +1,19 @@
 import './informacion.css';
-import { FooterComponent } from "../footer"
-
-import * as React from 'react';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
-
-import { styled } from '@mui/material/styles';
-
-import TableCell, { tableCellClasses } from '@mui/material/TableCell';
-
-const StyledTableCell = styled(TableCell)(({ theme }) => ({
-  [`&.${tableCellClasses.head}`]: {
-    fontSize: '30px',
-    fontFamily: '"Albert Sans", sans-serif',
-    fontOpticalSizing: 'auto',
-    fontStyle: 'normal',
-    color: '#004187',
-    fontWeight: 'bold',
-    border: '2px solid #0660C2',
-  },
-  [`&.${tableCellClasses.body}`]: {
-    fontSize: '20px',
-    border: '2px solid #0660C2',
-    color: '#004187', 
-  },
-}));
-
-const StyledTableRowHeaderCell = styled(StyledTableCell)({
-  fontWeight: 'bold',
-});
+import { FooterComponent } from "../footer";
 
 export const InformacionComponent = () => {
-
-
-
   return (
     <>
       <div className='container-general-informacion-banner'>
-
         <div className='titulo'>
           <h1>Conoce los <strong>beneficios</strong> de nuestro servicio</h1>
         </div>
-        <div class="circle grande azul-oscuro-izq"></div>
-        <div class="circle mediano azul-claro-izq"></div>
-        <div class="circle grande azul-oscuro-der"></div>
-        <div class="circle mediano azul-claro-der"></div>
+        <div className="circle grande azul-oscuro-izq"></div>
+        <div className="circle mediano azul-claro-izq"></div>
+        <div className="circle grande azul-oscuro-der"></div>
+        <div className="circle mediano azul-claro-der"></div>
       </div>
+
       <div className='container-banner-beneficios'>
         <div className='tarjetas-beneficio'>
           <div className='grid'>
@@ -75,55 +38,90 @@ export const InformacionComponent = () => {
           </div>
         </div>
       </div>
-      <div className='container-tabla-informacion'>
-        <div className='container-tabla'>
-          <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 650 }}>
-            <TableHead>
-              <TableRow>
-                <StyledTableCell align="left">Características</StyledTableCell>
-                <StyledTableCell align="left">Propano en granel</StyledTableCell>
-                <StyledTableCell align="left">Propano en cilindros</StyledTableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              <TableRow>
-                <StyledTableRowHeaderCell>Costos</StyledTableRowHeaderCell>
-                <StyledTableCell align="left">Más rentable a largo plazo.</StyledTableCell>
-                <StyledTableCell align="left">Puede ser más caro por compra frecuente.</StyledTableCell>
-              </TableRow>
-              <TableRow>
-                <StyledTableRowHeaderCell>Comodidad de uso</StyledTableRowHeaderCell>
-                <StyledTableCell align="left">Totalmente automatizado luego de la instalación.</StyledTableCell>
-                <StyledTableCell align="left">Necesidad de intervención manual (más propenso a accidentes).</StyledTableCell>
-              </TableRow>
-              <TableRow>
-                <StyledTableRowHeaderCell>Seguridad</StyledTableRowHeaderCell>
-                <StyledTableCell align="left">Instalación profesional y a nivel industrial.</StyledTableCell>
-                <StyledTableCell align="left">Más expuesto a fugas por mal uso o conexiones sueltas.</StyledTableCell>
-              </TableRow>
-              <TableRow>
-                <StyledTableRowHeaderCell>Logística y abastecimiento</StyledTableRowHeaderCell>
-                <StyledTableCell align="left">Entregas programadas, estabilidad y confianza en entrega.</StyledTableCell>
-                <StyledTableCell align="left">Depende del inventario de cilindros y demanda.</StyledTableCell>
-              </TableRow>
-              <TableRow>
-                <StyledTableRowHeaderCell>Autonomía</StyledTableRowHeaderCell>
-                <StyledTableCell align="left">Sin necesidad de intervención por parte del cliente.</StyledTableCell>
-                <StyledTableCell align="left">Tienes que cargar y conectar los cilindros manualmente.</StyledTableCell>
-              </TableRow>
-              <TableRow>
-                <StyledTableRowHeaderCell>Suministro continuo</StyledTableRowHeaderCell>
-                <StyledTableCell align="left">Entregas en periodos exactos.</StyledTableCell>
-                <StyledTableCell align="left">Entregas bajo demanda.</StyledTableCell>
-              </TableRow>
-            </TableBody>
-          </Table>
-        </TableContainer>
+
+      <section className="container-problema-solucion">
+        <h2 className="problema-solucion-titulo">
+          ¿Cansado de Interrupciones? Deje de Cambiar Cilindros y Empiece a Producir.
+        </h2>
+        
+        <div className="problema-solucion-grid">
+          <div className="problema-columna">
+            <h3 className="problema-solucion-subtitulo problema-subtitulo-rojo">
+              <span className="problema-solucion-icono icono-problema">✖</span>
+              EL PROBLEMA (Con Cilindros)
+            </h3>
+            
+            <img 
+              src="https://placehold.co/600x400/666/white?text=Cilindros+Desordenados&font=sans" 
+              alt="Cilindros de gas desordenados" 
+              className="problema-solucion-imagen" 
+            />
+            
+            <ul className="problema-solucion-lista">
+              <li className="problema-solucion-item">
+                <span className="problema-solucion-icono-pequeno icono-timer-off"></span>
+                <div>
+                  <h4 className="problema-solucion-item-titulo">"Me quedo sin gas en hora pico."</h4>
+                  <p className="problema-solucion-item-texto">La producción se detiene. Requiere cambios manuales que cortan el ritmo de trabajo.</p>
+                </div>
+              </li>
+              <li className="problema-solucion-item">
+                <span className="problema-solucion-icono-pequeno icono-trending-down"></span>
+                <div>
+                  <h4 className="problema-solucion-item-titulo">"La llama es débil al final."</h4>
+                  <p className="problema-solucion-item-texto">La presión es inestable y baja cuando el cilindro se acaba, arruinando la cocción.</p>
+                </div>
+              </li>
+              <li className="problema-solucion-item">
+                <span className="problema-solucion-icono-pequeno icono-dollar"></span>
+                <div>
+                  <h4 className="problema-solucion-item-titulo">"Pago más por menos."</h4>
+                  <p className="problema-solucion-item-texto">Paga un precio minorista (más caro) por cada cilindro y desperdicia el "fondo" que nunca sale.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div className="solucion-columna">
+            <h3 className="problema-solucion-subtitulo solucion-subtitulo-azul">
+              <span className="problema-solucion-icono icono-solucion">✔</span>
+              LA SOLUCIÓN (Con Gas a Granel)
+            </h3>
+            
+            <img 
+              src="https://placehold.co/600x400/1e3a8a/white?text=Cocina+Limpia+y+Ordenada&font=sans" 
+              alt="Cocina industrial limpia" 
+              className="problema-solucion-imagen" 
+            />
+            
+            <ul className="problema-solucion-lista">
+              <li className="problema-solucion-item">
+                <span className="problema-solucion-icono-pequeno icono-infinity"></span>
+                <div>
+                  <h4 className="problema-solucion-item-titulo">Suministro Ininterrumpido</h4>
+                  <p className="problema-solucion-item-texto">Tanques de gran capacidad (120 a 5,000 L) reabastecidos a domicilio. Su negocio nunca para.</p>
+                </div>
+              </li>
+              <li className="problema-solucion-item">
+                <span className="problema-solucion-icono-pequeno icono-gauge"></span>
+                <div>
+                  <h4 className="problema-solucion-item-titulo">Presión Fuerte y Constante</h4>
+                  <p className="problema-solucion-item-texto">Flama 100% estable de principio a fin. Control total de la temperatura para resultados perfectos.</p>
+                </div>
+              </li>
+              <li className="problema-solucion-item">
+                <span className="problema-solucion-icono-pequeno icono-piggy-bank"></span>
+                <div>
+                  <h4 className="problema-solucion-item-titulo">Ahorro Real (Precio Mayorista)</h4>
+                  <p className="problema-solucion-item-texto">Paga un precio por litro mucho más económico. Ahorro directo en sus costos operativos.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
+      </section>
+
       <FooterComponent />
     </>
   )
 }
-

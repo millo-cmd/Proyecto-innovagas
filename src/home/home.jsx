@@ -2,7 +2,7 @@ import './home.css'
 
 import {SwiperComponent} from './swiper'
 import {FooterComponent} from '../footer'
-
+import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 
@@ -40,8 +40,8 @@ export const HomeComponent = () => {
           <h1 className='titulo'>Ofrecemos energía sostenible</h1>
           <p className='parrafo-banner'>Para que juntos hagamos de esta hermosa Guatemala el próspero país que todos merecemos</p>
             <div className='contenedorBoton'>
-              <button className='boton-contacto'>¡Contáctanos!</button>
-              <button className='boton-producto'>Productos</button>
+              <Link to="/contacto" className='boton-contacto'>Contactanos!</Link>
+              <Link to="/productos" className='boton-producto'>Productos</Link> 
             </div>
             <div className='logos'>
               <img src="/assets/facebook.png" alt="facebook" />
