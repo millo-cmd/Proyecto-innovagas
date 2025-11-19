@@ -51,7 +51,6 @@
 }
 
 .titulo-productos-productos{
-  margin-top: 24px!important;
   text-align: center;
   font-family: "Albert Sans", sans-serif;
   font-optical-sizing: auto;
@@ -59,7 +58,8 @@
   font-weight: 700;
   font-size: 1.8rem;
   padding: 0px;
-  margin: 0px;
+  padding-top: 120px;
+  margin: 45px;
   color: #004187;
 }
 

@@ -14,8 +14,6 @@ export const ProductosComponent = () => {
     navigate('/contacto', { state: { productoSeleccionado: producto } })
   }
 
-  console.log(productos)
-
   return (
     <>
     <div className="container-general-flex-productos">
