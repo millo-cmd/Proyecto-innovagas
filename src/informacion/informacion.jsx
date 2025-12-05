@@ -48,14 +48,16 @@ export const InformacionComponent = () => {
           <div className="problema-columna">
             <h3 className="problema-solucion-subtitulo problema-subtitulo-rojo">
               <span className="problema-solucion-icono icono-problema">✖</span>
-              EL PROBLEMA (Con Cilindros)
+              EL PROBLEMA (Cilindros)
             </h3>
             
             <img 
-              src="https://placehold.co/600x400/666/white?text=Cilindros+Desordenados&font=sans" 
+              src="./assets/comparativa-roja.png" 
               alt="Cilindros de gas desordenados" 
               className="problema-solucion-imagen" 
             />
+
+            <br></br>
             
             <ul className="problema-solucion-lista">
               <li className="problema-solucion-item">
@@ -85,14 +87,16 @@ export const InformacionComponent = () => {
           <div className="solucion-columna">
             <h3 className="problema-solucion-subtitulo solucion-subtitulo-azul">
               <span className="problema-solucion-icono icono-solucion">✔</span>
-              LA SOLUCIÓN (Con Gas a Granel)
+              LA SOLUCIÓN (Gas a Granel)
             </h3>
             
             <img 
-              src="https://placehold.co/600x400/1e3a8a/white?text=Cocina+Limpia+y+Ordenada&font=sans" 
+              src="./assets/comparativa-azul.png" 
               alt="Cocina industrial limpia" 
               className="problema-solucion-imagen" 
             />
+
+            <br></br>
             
             <ul className="problema-solucion-lista">
               <li className="problema-solucion-item">

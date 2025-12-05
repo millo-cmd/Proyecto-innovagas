@@ -276,12 +276,15 @@
 }
 
 .problema-solucion-imagen {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   height: 16rem;
-  object-fit: cover;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  margin-bottom: 1.5rem;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto; /* <-- CENTRA LA IMAGEN HORIZONTALMENTE */
+  background-color: #f7f3e9;
+  padding: 1rem;
+  border-radius: 0.75rem;
 }
 
 .problema-solucion-lista {
@@ -331,6 +334,11 @@
   font-size: 1rem;
   color: #4a4a4a;
   line-height: 1.5;
+}
+
+.solucion-columna .problema-solucion-imagen {
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
 }
 
 @media (max-width: 580px) {
