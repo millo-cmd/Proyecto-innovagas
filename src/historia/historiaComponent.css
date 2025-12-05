@@ -1,7 +1,7 @@
 /* Contenedor principal */
 .historia-container {
   width: 100%;
-  max-width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 5rem 2rem;
   font-family: 'Poppins', 'Segoe UI', sans-serif;
@@ -9,6 +9,7 @@
   background: linear-gradient(180deg, #f4f7fb 0%, #ffffff 90%);
   border-radius: 12px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  overflow-x: hidden;
 }
 
 /* Estilos para títulos */

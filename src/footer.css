@@ -1,6 +1,8 @@
-.container-footer-general{
+.container-footer-general {
     width: 100%;
-    height: 300px;
+    min-height: 260px;
+    height: auto;
+    padding: 2rem 1rem;
     background-color: #004187;
     display: flex;
     align-items: center;
@@ -26,4 +28,10 @@
 .container-redes-sociales img{
     width: 32px;
     height: 32px;
+}
+
+@media (max-width: 768px) {
+    .container-footer-general {
+        padding: 3rem 1rem;
+    }
 }

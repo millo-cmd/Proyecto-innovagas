@@ -134,3 +134,13 @@
         display: flex;
     }
 }
+
+@media (max-width: 768px) {
+    .logo-link {
+        margin-left: 10px;
+    }
+
+    .container-bottons {
+        margin-right: 10px;
+    }
+}
