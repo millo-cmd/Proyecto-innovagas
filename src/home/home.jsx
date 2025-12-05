@@ -84,9 +84,9 @@ export const HomeComponent = () => {
         </div>
 
         <div className='card-tres' data-aos="fade-up-left" data-aos-duration="700" data-aos-delay="100">
-          <img src="/assets/card-vision.png" alt="" />
+          <img src="/assets/vision.png" alt="" />
           <div className='producto-vision'>
-            <h3> ¡Transforma tu negocio hoy! </h3>
+            <h3> ¡Transforma tu negocio hoy!</h3>
             <p>
               ¡No esperes más para transformar tu negocio! Contáctanos hoy mismo para descubrir cómo 
               una instalación de gas estacionario puede ser la mejor inversión para el crecimiento y la 
